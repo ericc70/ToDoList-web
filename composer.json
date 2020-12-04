@@ -9,7 +9,7 @@
         "ext-iconv": "*",
         "api-platform/core": "^2.5",
         "composer/package-versions-deprecated": "1.11.99.1",
-        "doctrine/annotations": "^1.0",
+        "doctrine/annotations": "^1.11",
         "doctrine/doctrine-bundle": "^2.2",
         "doctrine/doctrine-migrations-bundle": "^3.0",
         "doctrine/orm": "^2.7",
@@ -29,6 +29,7 @@
         "symfony/serializer": "5.2.*",
         "symfony/twig-bundle": "5.2.*",
         "symfony/validator": "5.2.*",
+        "symfony/webpack-encore-bundle": "^1.8",
         "symfony/yaml": "5.2.*",
         "twig/intl-extra": "^3.1"
     },

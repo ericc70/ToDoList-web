@@ -1,0 +1,25 @@
+{
+    "devDependencies": {
+        "@babel/preset-react": "^7.12.7",
+        "@symfony/stimulus-bridge": "^1.0.0",
+        "@symfony/webpack-encore": "^0.33.0",
+        "core-js": "^3.0.0",
+        "regenerator-runtime": "^0.13.2",
+        "stimulus": "^1.1.1",
+        "webpack-notifier": "^1.6.0"
+    },
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "dev-server": "encore dev-server",
+        "dev": "./node_modules/@symfony/webpack-encore/bin/encore.js dev",
+        "watch": "./node_modules/@symfony/webpack-encore/bin/encore.js dev --watch",
+        "build": "./node_modules/@symfony/webpack-encore/bin/encore.js production --progress"
+    },
+    "dependencies": {
+        "encore": "^0.0.30-beta",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "webpack-cli": "3.3.11"
+    }
+}
