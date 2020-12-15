@@ -8,8 +8,10 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ApiResource(
- *  collectionOperations={"get"},
- * itemOperations={"get"}
+ *     normalizationContext={},
+ *     denormalizationContext={},
+ *  collectionOperations={"get", "post"},
+ * itemOperations={"get"},
  * )
  * @ORM\Entity(repositoryClass=TasksRepository::class)
  */
@@ -43,9 +45,10 @@ class Tasks
     private $dateFor;
 
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\ManyToOne(targetEntity=Status::class, inversedBy="tasks")
      */
     private $status;
+
 
     public function getId(): ?int
     {
@@ -100,15 +103,16 @@ class Tasks
         return $this;
     }
 
-    public function getStatus(): ?int
+    public function getStatus(): ?Status
     {
         return $this->status;
     }
 
-    public function setStatus(int $status): self
+    public function setStatus(?Status $status): self
     {
         $this->status = $status;
 
         return $this;
     }
+
 }
